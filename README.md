@@ -127,9 +127,9 @@ There are two API's you'll need to be aware of. One is the static Contract Abstr
 
 Each contract abstraction -- `MyContract` in the examples above -- have the following useful functions:
 
-#### `MyContract.new([arg1, arg2, ...], [tx params])`
+#### `MyContract.new(arg1, arg2, ..., tx params)`
 
-This function take whatever contructor parameters your contract requires and deploys a new instance of the contract to the network. There's an optional last argument which you can use to pass transaction parameters including the transaction from address, gas limit and gas price. This function returns a Promise that resolves into a new instance of the contract abstraction at the newly deployed address.
+This function take whatever contructor parameters your contract requires and deploys a new instance of the contract to the network. There's an optional last argument which you can use to pass an object containing transaction parameters including the transaction from address, gas limit and gas price. This function returns a Promise that resolves into a new instance of the contract abstraction at the newly deployed address.
 
 #### `MyContract.at(address)`
 
